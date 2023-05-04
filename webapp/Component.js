@@ -5,10 +5,9 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "treinamento/appcategories/model/models",
-        "./controller/ErrorHandler"
+        "treinamento/appcategories/model/models"
     ],
-    function (UIComponent, Device, models, ErrorHandler) {
+    function (UIComponent, Device, models) {
         "use strict";
 
         return UIComponent.extend("treinamento.appcategories.Component", {
@@ -25,15 +24,13 @@ sap.ui.define([
                 // call the base component's init function
                 UIComponent.prototype.init.apply(this, arguments);
 
-                this._oErrorHandler = new ErrorHandler(this);
-
                 // enable routing
                 this.getRouter().initialize();
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
             },
-            
+
             destroy : function () {
                 this._oErrorHandler.destroy();
                 // call the base component's destroy function
