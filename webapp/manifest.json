@@ -109,20 +109,32 @@
             },
             "routes": [
                 {
-                    "name": "RouteList",
-                    "pattern": ":?query:",
-                    "target": [
-                        "TargetList"
-                    ]
+                  "pattern": "",
+                  "name": "list",
+                  "target": [
+                    "list"
+                  ]
+                },
+                {
+                  "pattern": "Categories/{objectId}",
+                  "name": "object",
+                  "target": [
+                    "object"
+                  ]
                 }
-            ],
-            "targets": {
-                "TargetList": {
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "clearControlAggregation": false,
-                    "viewId": "List",
-                    "viewName": "List"
+              ],
+              "targets": {
+                "list": {
+                  "viewName": "List",
+                  "viewId": "list",
+                  "viewLevel": 1,
+                  "title": "Categories"
+                },
+                "object": {
+                  "viewName": "Object",
+                  "viewId": "object",
+                  "viewLevel": 2,
+                  "title": "Detail"
                 }
             }
         },
