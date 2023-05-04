@@ -1,0 +1,17 @@
+<mvc:View
+    controllerName="treinamento.appcategories.controller.Object"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic">
+
+    <semantic:SemanticPage
+        id="page">
+
+        <semantic:titleHeading>
+            <Title
+                text="{CategoryID} - {CategoryName}"
+                level="H2"/>
+        </semantic:titleHeading>
+    
+    </semantic:SemanticPage>
+</mvc:View>

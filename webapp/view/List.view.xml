@@ -3,13 +3,23 @@
     xmlns="sap.m"
     xmlns:fb="sap.ui.comp.filterbar"
     xmlns:semantic="sap.f.semantic">
-    <!-- <Page id="page" title="{i18n>title}">
-        <content />
-    </Page> -->
     <semantic:SemanticPage>
+        <semantic:headerContent>
+            <fb:FilterBar reset="onReset" search="onSearch" showRestoreButton="true" showClearButton="true">
+			    <fb:filterGroupItems>
+
+                    <fb:FilterGroupItem groupName="G1" groupTitle="Group1" name="A1" label="Id" visibleInFilterBar="true">
+                        <fb:control>
+                            <SearchField value="{filterModel>/CategoryID}"/>
+                        </fb:control>
+				    </fb:FilterGroupItem>
+
+                </fb:filterGroupItems>
+            </fb:FilterBar>
+        </semantic:headerContent>
     <semantic:content>
             <Table
-                id="table"
+                id="Table"
                 width="auto"
                 items="{
                     path: '/Categories',
